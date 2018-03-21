@@ -1,0 +1,34 @@
+.content {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+mat-card {
+    max-width: 600px;
+    min-width: 300px;
+    text-align: center;
+}
+img {
+    width: 100%;
+}
+mat-spinner {
+    margin: 40px auto;
+}
+.navigate {
+    text-align: center;
+    margin-top: 20px;
+}
+mat-chip-list {
+    display: flex;
+    justify-content: space-around;
+}
+h1 {
+    font-size: 36px;
+}
+.fixed-height {
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

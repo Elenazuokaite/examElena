@@ -1,0 +1,28 @@
+<section class="content">
+  <mat-card>
+    <mat-chip-list>
+      <mat-chip color="primary" selected="true">Success: {{success}}</mat-chip>
+      <mat-chip color="accent" selected="true">Failed: {{fail}}</mat-chip>
+    </mat-chip-list>
+    <h1>Meme generator</h1>
+    <div class="fixed-height">
+      <div *ngIf="memeUrl; else noimage">
+        <p>{{name}}</p>
+        <img src={{memeUrl}}>
+        <div class="navigate">
+          <button mat-button (click)="prevMeme()" color="primary" [disabled]="requestCount > 2"><i class="material-icons">keyboard_arrow_left</i> Previous</button>
+          <button mat-button (click)="nextMeme()" color="accent" [disabled]="requestCount > 2">Next <i class="material-icons">keyboard_arrow_right</i></button>
+        </div>
+      </div>
+      <ng-template #noimage>
+        <div class="fixed-height">
+          <mat-spinner></mat-spinner>
+          <div class="navigate">
+            <button mat-button (click)="prevMeme()" color="primary" [disabled]="requestCount > 2"><i class="material-icons">keyboard_arrow_left</i> Previous</button>
+            <button mat-button (click)="nextMeme()" color="accent" [disabled]="requestCount > 2">Next <i class="material-icons">keyboard_arrow_right</i></button>
+          </div>
+        </div>
+      </ng-template>
+    </div>
+  </mat-card>
+</section>
